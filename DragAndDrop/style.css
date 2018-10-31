@@ -1,0 +1,25 @@
+body {
+  margin: 10px;
+}
+
+.glyphicon-move {
+  cursor: move;
+  cursor: -webkit-grabbing;
+}
+
+#DropZone{
+  min-height: 100px
+}
+
+.group_2{
+  position: relative;
+}
+
+#remove{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  z-index: 999999;
+}
