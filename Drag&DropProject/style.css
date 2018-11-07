@@ -1,0 +1,30 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	margin: 50px;
+}
+.glyphicon-move {
+	  cursor: move;
+  cursor: -webkit-grabbing;
+}
+.card-header{
+	text-align: center;
+	background: #FA6546;
+	color: #fff;
+}
+.list-group{
+	text-align: center;
+}
+#DropArea{
+	min-height: 100px;
+}
+#remove{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%); 
+	display: none;
+	z-index: #999999;
+}
