@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>MyPortfolio</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="animate.css">
+	<script src="js/wow/wow.min.js"></script>
+	
+	<style type="text/css">
+		*,
+		*::before,
+		*::after{
+			box-sizing: border-box;
+		}
+		*:focus{
+			outline: none;
+		}
+		body{
+			margin: 0px;
+			padding: 0px;
+			background: #000;
+			color: white;
+			font-family: "Oxygen" , sans-serif;
+			
+		}
+		a{
+			text-decoration: none;
+		}
+		img{
+			width: 100%;
+
+		}
+		.home img{
+			width: 100%;
+			-webkit-filter: grayscale(100%) contrast(100%);  
+			filter: grayscale(100%) contrast(100%) brightness(60%);
+		}
+		.folio img{
+			filter: grayscale(10%);
+		}
+		aside{
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			background: #222;
+			width: 120px;
+			height: 100%;
+			overflow: none;
+			z-index: 1;
+			text-align: center;
+			padding: 0px; 
+		}
+		aside img{
+			filter: grayscale(10%) contrast(150%) brightness(100%);
+			margin-bottom: -3px;
+		}
+		.fa{
+			font-size: 36px;
+		}
+		.fas{
+			font-size: 36px;
+		}
+		aside a{
+			display: block;
+			padding: 15px 0;
+			color: white;
+			transition: all 0.35s;
+			text-transform: uppercase;
+			font-size: 0.75em;
+			letter-spacing: 2px;
+
+		}
+		aside p{
+			padding: 0;
+			margin: 0;
+		}
+		aside a{
+			margin: 0px;
+			padding: 10px;
+		}
+		aside a:hover{
+			background: #000;
+		}
+		aside nav a:nth-child(2){
+			background: #000;
+
+		}
+		aside nav a:nth-child(2):hover{
+			background: #b2b2b2;
+			color: #222;
+		}
+		main{
+			max-width: 980px;
+
+
+			margin-left: 20%;
+			padding: 12px 50px 12px 50px;
+
+		}
+		main img{
+				animation-delay: .1s;
+			animation-duration: .5s;
+		}
+		header{
+
+
+			text-align: center;
+			letter-spacing: 2px;
+		}
+		header h1{
+			
+			font-weight: bold;
+			letter-spacing: 4px;
+			font-size: 4em;
+			animation-delay: .5s;
+			animation-duration: .5s;
+		}
+		header h5{
+			font-weight: 300;
+			font-size: 1em;
+			letter-spacing: 4px;
+			color: #b2b2b2;
+			animation-delay: .1s;
+			animation-duration: .5s;
+		}
+		.about,
+		.folio,
+		.contact{
+			line-height: 1.5em;
+			letter-spacing: 1px;
+			font-weight: 300;
+			
+			max-width: 980px;
+			margin-left: 230px;
+		}
+		.about h2,
+		.folio h2,
+		.contact h2{
+			font-weight: 300;
+			text-align: center;
+			text-transform: uppercase;
+			padding-bottom: 10px;
+			margin: 100px 0 0 0;
+			letter-spacing: 4px;
+		}
+		.about h3{
+			text-align: center;
+
+		}
+		.about p{
+			color: #b2b2b2;
+		}
+		.about span{
+			font-weight: 600;
+			color: white;
+		}
+		.about h3{
+			font-weight: 300;
+			margin: 50px 0;
+		}
+		.container{
+			width: 100%;
+			background-color: #b2b2b2;
+		}
+		.skills{
+			text-align: right;
+			padding-right: 20px;
+			line-height: 30px;
+			color: white;
+			background-color: #424242;
+		}
+		.html{
+			width: 95%;
+
+		}
+		.css{
+			width: 90%;
+		}
+		.js{
+			width: 80%;
+		}
+		.php{
+			width: 40%;
+		}
+		.jquery{
+			width: 60%;
+		}
+		.photoshop{
+			width: 80%;
+		}
+		.bt{
+			width: 80%;
+		}
+		.bottom-bar{
+			background: #000;
+			font-size: 0.75em;
+			text-align: center; 
+		}
+		.bottom-bar p{
+			text-align: center;
+			font-size: 0.75em;
+			background: #000;
+		}
+		.footer{
+			border-top: 1px solid #222;
+		}
+		.top-bar{
+			text-align: center;
+			padding: 20px 0px;
+		}
+		.top-bar a{
+			margin: 10px;
+			font-size: 2em;
+			color: #b2b2b2;
+			transition: all 0.35s;
+			display: inline-block;
+
+		}
+		.top-bar a:hover{
+			transform: scale(2.2);
+			color: #009688;
+		}
+		.fab{
+			font-size: 40px;
+			padding: 10px;
+			color: white;
+		}
+		.folio h3{
+			font-weight: 300;
+			color: white;
+			letter-spacing: 2px;
+		}
+		.folio p{
+			font-size: 0.875em;
+		}
+		.row-halves{
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			justify-content: space-between;
+			margin: 20px 0px;
+			-webkit-flex-pack:justify;
+		}
+		.row-halves .col{
+			width: 49%;
+
+		}
+		.col{
+			border: 1px solid #222;
+			background: #222;
+			color: #b2b2b2;
+			padding: 10px;
+		}
+		label{
+			color: #b2b2b2;
+
+		}
+		.bg-parallax{
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+		.contant-title-underline{
+			width: 50px;
+			color: #42f4e2;
+			border: 1px solid #42f4e2;
+			text-align: center;
+			margin-left: 460px;
+			}
+		.document{
+			text-align: center;
+			padding: 10px;
+		}	
+
+
+
+		form input[type="text"],
+		select,
+		textarea{
+			width: 100%;
+			padding: 12px;
+			border: none;
+			border: 1px solid #222;
+			background: transparent;
+			margin-top: 6px;
+			margin-bottom: 16px;
+			resize: vertical;
+			color: #b2b2b2;
+		}
+		form input[type="text"]:focus,
+		textarea:focus{
+			outline: none;
+			border: 1px solid #009688;
+		}
+		input[type="submit"]{
+			background-color : transparent;
+			color: #b2b2b2;
+			text-transform: uppercase;
+			padding: 12px 20px;
+			border: 1px solid #222;
+			cursor: pointer;
+			transition: all 0.35s;
+		}
+		input[type="submit"]{
+			background-color: transparent;
+			color: #b2b2b2;
+			text-transform: uppercase;
+			padding: 12px 20px;
+			cursor: pointer;
+			border: 1px solid #222;
+			transition: all 0.35s;
+		}
+		input[type="submit"]:hover{
+			background-color: #b2b2b2;
+			color: #222;
+		}
+		.contact .container{
+			margin-top: 20px;
+			margin-bottom: 100px;
+			background: transparent;
+			padding: 20px 0;
+		}
+		@media (max-width: 768px){
+			.row-halves{
+				display: block;
+			}
+			.row-halves .col{
+				width: 100%;
+				margin: 0 0 10px 0;
+			}
+		}
+		@media (max-width: 601px){
+			aside{
+				display: none;
+			}
+			main{
+				width: 100%;
+				margin: 0 auto;
+				padding: 12px 25px;
+			}
+			header{
+				margin-top: 80px;
+
+			}
+			header h1{
+				font-size: 3em;
+			line-height: 1.4em;
+			}
+				header h5{
+				font-size: 1em;
+			letter-spacing: 2px;
+			}
+			.mobile-nav{
+			position: fixed;
+			width: 100%;
+		    display: flex;
+			justify-content: space-around;
+			background: rgba(0,0,0,0.8);
+			z-index: 1;
+		}
+		.mobile-nav a{
+			width: 100%;
+			color: #b2b2b2;
+			text-transform: uppercase;
+			font-size: 0.875em;
+			text-align: center;
+			letter-spacing: 2px;
+			padding: 10px 10px;
+			transition: all 0.35s;
+		}
+		.mobile-nav a:hover{
+			background: #b2b2b2;
+			color: #222;
+		}
+
+		}
+		@media (min-width: 600px){
+			.mobile-nav{
+				display: none;
+			}
+		}
+
+
+	</style>
+	
+</head>
+<body>
+<aside>
+	<nav>
+		<img src="img/my.jpg" alt="">
+		<a href="#home"><i class="fa fa-home md-36"></i>
+			<p>Home</p>
+		</a>
+		<a href="#about"><i class="fas fa-user-alt md-36"></i>
+			<p>About</p>
+		</a>
+		<a href="#folio"><i class="fas fa-image md-36"></i>
+			<p>Portfolio</p>
+		</a>
+		<a href="#contact"><i class="fas fa-envelope md-36"></i>
+			<p>Contact</p>
+		</a>
+	</nav>
+</aside>
+<nav class="mobile-nav">
+	<a href="#home">Home</a>
+	<a href="#about">About</a>
+	<a href="#folio">Folio</a>
+	<a href="#contact">Contact</a>
+	
+</nav>
+<main class="bg-parallax animated fadeIn">
+	<header class="home" id="home"><br><br>
+		<h1 class="animated zoomIn">I'm Usman Khan Shipo</h1>
+		<h5 class="animated zoomIn">Designer // Developer</h5>
+		<img src="img/main.jpg" alt="">
+		
+	</header>
+	</main>
+	<br><br><br><br><br>
+	
+
+		<section class="about" id="about">
+			<div class="document">
+			<h2 class="contant-title wow animated fadeInDown" data-wow-duration="2s" data-wow-delay="5s">About Me</h2>
+			<div class="contant-title-underline"></div>
+		</div>
+			<p>
+				<span>Hello,I'm Usman</span> I'm Designer And Developer,life long learner,and ready for new opportunities.A bit about me,i love music,play cricket and batmenton,teach and all the things cretive. 
+			</p>
+			<p>
+				I belive in user centered design and delivering the best possible experiences to people.I have experience Html css,Bootstrap,JavaScript,Jquery and Photoshop as well.
+			</p>
+			
+			<h3>My Skill</h3>
+			
+			<p>Html</p>
+			<div class="container">
+				<div class="skills html">90%</div>
+			</div>
+			<p>CSS</p>
+				<div class="container">
+				<div class="skills css">80%</div>
+			</div>
+			<p>JavaScript</p>
+				<div class="container">
+				<div class="skills js">60%</div>
+			</div>
+			<p>Bootstrap</p>
+				<div class="container">
+				<div class="skills bt">70%</div>
+			</div>
+			<p>PHP</p>
+				<div class="container">
+				<div class="skills php">40%</div>
+			</div>
+			<p>Jqurey</p>
+				<div class="container">
+				<div class="skills jquery">50%</div>
+			</div>
+			<p>Photoshop</p>
+				<div class="container">
+				<div class="skills photoshop">70%</div>
+			</div>
+
+		</section>
+
+		<section class="folio" id="folio">
+			<h2 class="contant-title animated fadeInDown">Portfolio</h2>
+			<div class="contant-title-underline"></div>
+			<div class="row-halves animated fadeInUp">
+				<div class="col">
+					<img src="img/login.png" alt="">
+					<h3>UX Design</h3>
+					<p>Thoughtful and intuitive user experiences. All of my designs well be gurenteed to wor your clients. </p>
+				</div>
+					
+				<div class="col">
+					<img src="img/login2.jpg" alt="">
+					<h3>Business</h3>
+					<p>Building responsive and thoughtful sites for small and large business. </p>
+				</div>
+			</div>
+                   <div class="row-halves animated fadeInUp">
+					<div class="col">
+					<img src="img/web.jpg" alt="">
+					<h3>Mobile</h3>
+					<p>Fully responsibe and,mobile ready design and implemention for all. </p>
+				</div>
+					<div class="col">
+					<img src="img/web1.jpg" alt="">
+					<h3>Personal</h3>
+					<p>I also design and build for personal project. no idea is too small and everyone deserves a voice on the web. </p>
+				</div>
+				
+			</div>
+
+			
+		</section>
+
+		 <section class="contact" id="contact">
+		 	<h2 class="animated fadeInDown">Contact</h2>
+		 	<div class="contant-title-underline"></div>
+            <div class="container">
+            	<form action="">
+            		<label for="name">Name</label>
+            		<input type="text" name="name" id="name">
+            		<label for="email">E-mail</label>
+            		<input type="email" name="email" id="email"><br><br>
+            		<label for="message">Message</label> 
+            		<textarea name="message" id="message" style="height: 200px"></textarea>
+            		<input type="submit" name="submit" value="Message">
+
+            		
+            	</form>
+            	
+            </div>
+		 	
+		 </section>
+		 <footer>
+		 	<section class="top-bar animated fadeInDown">
+		 		<a href="https://www.facebook.com/usmanshipo"><i class="fab fa-facebook-f"></i></a>
+		 		<a href=""><i class="fab fa-instagram"></i></a>
+		 		<a href=""><i class="fab fa-youtube"></i></a>
+		 		<a href="https://github.com/"><i class="fab fa-github"></i></a>
+		 		
+		 	</section>
+		 	<section class="bottom-bar">
+		 		<p>&copy usmanshipo2018 || All Right Reserved</p>
+		 		
+		 	</section>
+		 </footer>
+	
+
+</body>
+</html>
